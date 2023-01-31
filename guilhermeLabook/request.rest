@@ -1,0 +1,24 @@
+POST http://localhost:3003/post
+Content-Type: application/json
+
+{
+    "photo": "Terra vista da lua.",
+    "description": "Primeiro teste",
+    "type": "normal",
+    "authorId": "vamos"
+}
+
+###
+
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Terra",
+    "email": "terra@planeta.com",
+    "password": "PlanetaVivo"
+}
+
+###
+
+GET http://localhost:3003/user

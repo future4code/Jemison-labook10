@@ -1,7 +1,10 @@
-import { connection } from "./index"
+import { BaseDatabase } from "./data/BaseDataBase"
 
-connection
-   .raw(`
+export class Migration extends BaseDatabase{ 
+
+   creatTables = async () =>{
+
+   await Migration.connection.raw(`
       CREATE TABLE IF NOT EXISTS labook_users(
          id VARCHAR(255) PRIMARY KEY,
          name VARCHAR(255) NOT NULL,
@@ -23,3 +26,7 @@ connection
     console.log(`Tables created successfully!`)
 })
 .catch((error: any) => console.log(error.sqlMessage || error.message))
+}}
+
+const migration = new Migration()
+migration.creatTables()
