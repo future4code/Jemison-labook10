@@ -1,7 +1,3 @@
-export interface AuthenticationDataDTO  {
-    id: string
-}
- 
 export interface  InsertUserDTO  {
     id: string,
     name: string,

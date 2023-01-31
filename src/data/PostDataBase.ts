@@ -1,4 +1,4 @@
-import { InsertPostDTO } from './../model/PostDTO';
+import { AuthenticationDataDTO, CreatePostDTO, InsertPostDTO } from './../model/PostDTO';
 import { BaseDatabase } from "./BaseDataBase";
 
 export class PostDataBase extends BaseDatabase{
@@ -13,5 +13,13 @@ export class PostDataBase extends BaseDatabase{
             created_at:createdAt,
             author_id:authorId
         }).into(PostDataBase.TABLE_POST)
+    }
+
+    async allPost() :Promise<CreatePostDTO>{
+        return await PostDataBase.connection.select().from(PostDataBase.TABLE_POST)
+    }
+
+    async idPost({id}:AuthenticationDataDTO) :Promise<AuthenticationDataDTO[]>{
+        return await PostDataBase.connection.select().from(PostDataBase.TABLE_POST).where("id", id)
     }
 }

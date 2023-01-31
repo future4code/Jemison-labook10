@@ -18,3 +18,7 @@ export interface CreatePostDTO {
    type: POST_TYPES,
    authorId: string
 }
+
+export interface AuthenticationDataDTO  {
+    id: string
+}

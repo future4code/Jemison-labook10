@@ -14,7 +14,7 @@ export class UserDatabase extends BaseDatabase{
         }).into(UserDatabase.TABLE_USER)
     }
 
-    async users () :Promise<CreateUserDTO> {
+    async users() :Promise<CreateUserDTO> {
 
         return await UserDatabase.connection.select().from(UserDatabase.TABLE_USER)
     

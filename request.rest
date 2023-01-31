@@ -1,24 +1,37 @@
-POST http://localhost:3003/post
+### Criar Post=============================================================
+POST http://localhost:3003/post/create
 Content-Type: application/json
 
 {
-    "photo": "Terra vista da lua.",
-    "description": "Primeiro teste",
-    "type": "normal",
-    "authorId": "vamos"
+    "photo": "Verão 2",
+    "description": "3 teste",
+    "type": "event",
+    "authorId": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
 }
 
-###
+###Todos os Post=========================================================
+
+GET http://localhost:3003/post
+
+###Buscar post pelo ID ===================================================
+GET http://localhost:3003/post
+Content-Type: application/json
+
+{
+    "id" : "46d82dea-930b-497f-a687-20da4c949f27"
+}
+
+### Criar Usuarios ========================================================
 
 POST http://localhost:3003/user/create
 Content-Type: application/json
 
 {
-    "name": "Terra",
-    "email": "terra@planeta.com",
-    "password": "PlanetaVivo"
+    "name": "Marte",
+    "email": "mar@planeta.com",
+    "password": "Calorentão"
 }
 
-###
+### Todos os usuarios ======================================================
 
 GET http://localhost:3003/user

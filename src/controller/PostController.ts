@@ -20,4 +20,24 @@ export class PostController {
         }
 
     }
+
+    async allPost(req:Request, res:Response) :Promise<void>{
+        try{
+
+            const idBusiness = new PostBusiness()
+            const posts = await idBusiness.allPost()
+
+            res.status(200).send(posts)
+
+        }catch (error: any) {
+            throw new CustomError(error.statusCode || 400, error.message || error.sqlMessage)
+        }
+    }
+
+    async idPost(req:Request, res:Response) :Promise<void>{
+
+        const idPostBusiness = new PostBusiness()
+        await idPostBusiness.idPost({id: req.body.id})
+
+    }
 }
