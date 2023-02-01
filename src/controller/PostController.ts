@@ -6,7 +6,7 @@ export class PostController {
     async create(req:Request, res:Response):Promise<void>{
         try{
             
-            const postBusiness = new PostBusiness
+            const postBusiness = new PostBusiness()
             await postBusiness.create({
                 photo: req.body.photo,
                 description: req.body.description,

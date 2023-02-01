@@ -20,7 +20,14 @@ export class Migration extends BaseDatabase{
          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
          author_id VARCHAR(255),
          FOREIGN KEY (author_id) REFERENCES labook_users (id)
-      )
+      );
+
+      CREATE TABLE labook_friend (
+         user VARCHAR(255),
+         friendship VARCHAR(255),
+         FOREIGN KEY(user) REFERENCES labook_users(id),
+         FOREIGN KEY(friendship) REFERENCES labook_users(id)
+      );
    `)
    .then(() => {
     console.log(`Tables created successfully!`)

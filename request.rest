@@ -9,7 +9,7 @@ Content-Type: application/json
     "authorId": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
 }
 
-###Todos os Post=========================================================
+###Todos todos os Post=========================================================
 
 GET http://localhost:3003/post
 
@@ -35,3 +35,14 @@ Content-Type: application/json
 ### Todos os usuarios ======================================================
 
 GET http://localhost:3003/user
+
+### Fazer amizade ==========================================================
+
+POST http://localhost:3003/friend/friendship
+Content-Type: application/json
+
+{
+    "user": "çolikjhg",
+    "friends": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+}
+    
