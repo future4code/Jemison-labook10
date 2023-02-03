@@ -13,7 +13,7 @@ export class UsersController {
                 password:req.body.password
             })
 
-            res.status(201).send({ message: "Post criado com sucesso" });
+            res.status(201).send({ message: "Usuario criado com sucesso" });
         }catch (error: any) {
             throw new CustomError(error.statusCode || 400, error.message || error.sqlMessage)
         }

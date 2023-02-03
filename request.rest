@@ -49,15 +49,15 @@ Content-Type: application/json
 
 {
     "user": "çolikjhg",
-    "friendship": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+    "friendship": "bd615ebf-c319-4975-9b47-7e261cd7b6a2"
 }
 
 ### Desfazer amizade ========================================================
 
-POST http://localhost:3003/friend/unfriend
+DELETE  http://localhost:3003/friend/unfriend
 Content-Type: application/json
 
 {
     "user": "çolikjhg",
-    "friendship": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+    "friendship": "bd615ebf-c319-4975-9b47-7e261cd7b6a2"
 }

@@ -17,6 +17,8 @@ export class FriendBusiness {
                 friendship
             })
 
+            console.log(friend)
+
             const friendDatabase = new FriendDataBase()
             await friendDatabase.friend(friend)
 
