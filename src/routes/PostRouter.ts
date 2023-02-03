@@ -10,3 +10,5 @@ postRouter.post("/create", postController.create)
 postRouter.get("/", postController.allPost)
 
 postRouter.get("/", postController.idPost)
+
+postRouter.get("/", postController.postFrined)

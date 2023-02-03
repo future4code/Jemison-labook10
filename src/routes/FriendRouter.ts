@@ -7,3 +7,4 @@ const frindController = new FriendController()
 
 friendRouter.post("/friendship", frindController.friend)
 
+friendRouter.post("/unfriend", frindController.unfriend)

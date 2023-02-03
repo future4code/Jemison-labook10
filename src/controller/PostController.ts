@@ -35,9 +35,28 @@ export class PostController {
     }
 
     async idPost(req:Request, res:Response) :Promise<void>{
+        try{
 
-        const idPostBusiness = new PostBusiness()
-        await idPostBusiness.idPost({id: req.body.id})
+            const idPostBusiness = new PostBusiness()
+            await idPostBusiness.idPost({id: req.body.id})
 
+        }catch (error: any) {
+            throw new CustomError(error.statusCode || 400, error.message || error.sqlMessage)
+        }
+    }
+
+    async postFrined(req: Request, res: Response) :Promise<void> {
+        try{
+
+        const postBusiness = new PostBusiness()
+        const result = await postBusiness.postFrined({
+            id:req.body,
+            user:req.body
+        })
+        res.status(200).send(result)
+
+        }catch (error: any) {
+            throw new CustomError(error.statusCode || 400, error.message || error.sqlMessage)
+        }
     }
 }

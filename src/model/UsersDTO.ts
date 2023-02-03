@@ -1,3 +1,8 @@
+export interface AllPostFriends {
+    id : string,
+    user : string
+}
+
 export interface  InsertUserDTO  {
     id: string,
     name: string,

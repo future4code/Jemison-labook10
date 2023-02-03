@@ -21,6 +21,16 @@ Content-Type: application/json
     "id" : "46d82dea-930b-497f-a687-20da4c949f27"
 }
 
+### Buscar post amigo ======================================================
+
+GET http://localhost:3003/post
+Content-Type: application/json
+
+{
+    "id": "çolikjhg",
+    "user": "çolikjhg"
+}
+
 ### Criar Usuarios ========================================================
 
 POST http://localhost:3003/user/create
@@ -32,10 +42,6 @@ Content-Type: application/json
     "password": "Calorentão"
 }
 
-### Todos os usuarios ======================================================
-
-GET http://localhost:3003/user
-
 ### Fazer amizade ==========================================================
 
 POST http://localhost:3003/friend/friendship
@@ -43,6 +49,15 @@ Content-Type: application/json
 
 {
     "user": "çolikjhg",
-    "friends": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+    "friendship": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
 }
-    
+
+### Desfazer amizade ========================================================
+
+POST http://localhost:3003/friend/unfriend
+Content-Type: application/json
+
+{
+    "user": "çolikjhg",
+    "friendship": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+}

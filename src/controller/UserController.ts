@@ -19,14 +19,6 @@ export class UsersController {
         }
     }
 
-    async users(req: Request, res: Response) :Promise<void> {
-
-        const userBusiness = new UsersBusiness()
-        const users = await userBusiness.users()
-    
-        res.status(200).send(users)
-    
-    }
 }
 
  
