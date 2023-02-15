@@ -1,0 +1,63 @@
+### Criar Post=============================================================
+POST http://localhost:3003/post/create
+Content-Type: application/json
+
+{
+    "photo": "Verão 2",
+    "description": "3 teste",
+    "type": "event",
+    "authorId": "47aa8c48-a8f9-4a00-93bc-06610c712fee"
+}
+
+###Todos todos os Post=========================================================
+
+GET http://localhost:3003/post
+
+###Buscar post pelo ID ===================================================
+GET http://localhost:3003/post
+Content-Type: application/json
+
+{
+    "id" : "46d82dea-930b-497f-a687-20da4c949f27"
+}
+
+### Buscar post amigo ======================================================
+
+GET http://localhost:3003/post
+Content-Type: application/json
+
+{
+    "id": "çolikjhg",
+    "user": "çolikjhg"
+}
+
+### Criar Usuarios ========================================================
+
+POST http://localhost:3003/user/create
+Content-Type: application/json
+
+{
+    "name": "Marte",
+    "email": "mar@planeta.com",
+    "password": "Calorentão"
+}
+
+### Fazer amizade ==========================================================
+
+POST http://localhost:3003/friend/friendship
+Content-Type: application/json
+
+{
+    "user": "çolikjhg",
+    "friendship": "bd615ebf-c319-4975-9b47-7e261cd7b6a2"
+}
+
+### Desfazer amizade ========================================================
+
+DELETE  http://localhost:3003/friend/unfriend
+Content-Type: application/json
+
+{
+    "user": "çolikjhg",
+    "friendship": "bd615ebf-c319-4975-9b47-7e261cd7b6a2"
+}
